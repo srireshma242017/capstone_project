@@ -17,7 +17,6 @@ admin.initializeApp({
 
 app.use(express.json());
 
-
 app.use(express.urlencoded({extended:true}));
 
 const db = admin.firestore();
