@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url(output.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            table{
+                
+                background-color:aliceblue;
+                border-style: solid;
+                border-color: rgb(149, 88, 19);
+                width: 700;
+                height: 0;
+                box-shadow: inset;
+                
+                
+                
+            }
+            h1{
+                color: rgb(16, 18, 174);
+            }
+            h2{
+                color: rgb(16, 18, 174)
+            }
+        </style>
+    </head>
+
+    <body >
+        
+
+        <h1 align="center" style="margin-top: 200px;">CONVERTED TEMPERATURE</h1><br><br>
+
+        <table align="center" >
+            <tr>
+                <td>
+                    <br>
+                    
+                </td>
+            </tr>
+            <tr>
+                
+                <td align="center">
+                    <h2> Celsius: </h2>
+
+                </td>
+                <td>
+                    <h3><%=Celsius %></h3>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    
+                        <h2>Fahrenheit:  </h2>
+                     
+                </td>
+                <td>
+                    <h3><%= Fahrenheit %></h3>
+
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                   
+                        <h2>Kelvin: </h2>
+                    
+
+                </td>
+                <td>
+                    <h3> <%= Kelvin %></h3>
+                </td>
+            </tr>
+
+        </table> 
+        
+    </body>
+</html>
