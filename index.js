@@ -41,8 +41,6 @@ app.get("/signupsubmit",(req,res)=>{
     const email = req.query.semail;
     const password = req.query.spassword;
     const repeatpassword = req.query.srpassword;
-    
-
 
     if(password === repeatpassword) {
         db.collection("data")
@@ -104,12 +102,8 @@ app.get("/gettmp", function (req, res) {
     res.render("output", {
       Celsius:tmpnumber,
       Fahrenheit : x,
-      Kelvin : y
-
-            
+      Kelvin : y     
   });
-
-
   }else if(select=="fahrenheit"){
     const fahrenheit = new Converter.Fahrenheit(tmpnumber);
     const z = fahrenheit.toCelsius();
@@ -117,12 +111,8 @@ app.get("/gettmp", function (req, res) {
     res.render("output", {
       Celsius : z,
       Fahrenheit:tmpnumber,
-
-      Kelvin : w
-
-            
+      Kelvin : w    
   });
-
   }else{
     const kelvin = new Converter.Kelvin(tmpnumber);
     const k = kelvin.toCelsius();
@@ -130,24 +120,11 @@ app.get("/gettmp", function (req, res) {
     res.render("output", {
       Celsius : k,
       Fahrenheit : l,
-      Kelvin : tmpnumber
-
-            
+      Kelvin : tmpnumber      
   });
-  }
-
-  
-  
-
-  
-
-        
+  }    
 });
 
-
-
-
-
 app.listen(port ,() =>{
-  console.log("example app running $(port)")
+  console.log("Application is running in the server");
 });
